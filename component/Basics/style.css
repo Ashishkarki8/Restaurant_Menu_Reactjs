@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  background: #faf7f2;
+  background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.subtle {
+  color: rgb(0, 0, 0);
+}
+
+.main-card--cointainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 500px));
+  grid-gap: 30px;    /* column gap */
+  justify-content: space-around;
+}
+
+.card-container {
+  margin: 19px auto 0;       /* rows gap */
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.card-container img {
+   width: 520px;     /* 550 */       /* forimage */
+  /* max-width: 50%; */
+  height: 320px;   /* 300 */
+  padding-left: 0px;     /* 0px */
+  
+}
+
+.card {
+  background-color: #fff;
+  /* margin-left: 100px; */
+   padding: 40px;  /* padding: 30px; */
+  /* padding-left: 90px;
+  padding-right: 90px; */
+  position: relative;
+  box-shadow:  500px 10px 50px rgba(75, 75, 75, 0.07);    /* 500px 10px 50px rgba(75, 75, 75, 0.07); */
+  z-index: 1;
+}
+
+.card-body {
+  display: inline-block;
+}
+
+.card-number {
+  margin-top: 0px;
+}
+
+.card-circle {
+  border: 2.5px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 22px;
+  font-size: 12px;
+  height: 25px;
+  text-align: center;
+  width: 25px;
+}
+
+.card-author {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 60px;
+  font-weight: 301;
+  line-height: 60px;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+
+.card-description {          /* for loremipsum */
+  /* display: inline-block; */
+  font-weight: 500;
+  line-height: 22px;
+  margin: 10px 0;
+}
+
+.card-read {
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin: 5px 0 20px;
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.card-read:after {         /* readcheuko dharko */
+  background-color: #ab9f9f;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 9px;
+  width: 75%;
+}
+
+.card-tag {     /*for button*/
+  float: right;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  margin: 20px 0px -10px;     /* margin: 20px 120px -10px 40px; */
+  letter-spacing: 0.7px;
+  /* border: 2.5px solid rgb(61, 56, 56);  nahaleko ramro dekcha*/   
+  padding: 4px 10px;
+  cursor: pointer;
+  color: #fefcfc;
+  font-size: 28px;
+  background-color: #000000;  /* #f30000 */
+  
+  box-shadow: 4px 4px 15px #131111;   /* #fc0000; */   /* background clolor shadow */
+  /* border:none; */        /* border harucha */
+  border-radius:9px;         /* button curve garcha */
+}
+
+.card-tag:hover {
+  /* background: #aaa;
+  color: black;
+  color: rgb(255, 253, 253); */
+  color: black;
+  box-shadow: 7px 7px 100px #f51e1eed;
+  background-color: #ff0000;
+}
+
+.card-media {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-shadow {
+  background-color: #fff;
+  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1),
+    0 0 100px 3px rgba(0, 0, 0, 0.25);
+  height: 1px;
+  margin: -1px auto 0;
+  width: 80%;
+  z-index: -1;
+}
+
+@media (max-width: 998px) {
+  .main-card--cointainer {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 500px));
+    grid-gap: 50px;
+    justify-content: space-around;
+  }
+}
+
+/* ---------- Button styles ------------------ */
+
+.navbar {
+  padding-top: 50px;
+  text-align: center;        /* for menu bar position */
+}
+
+.navbar h1 {
+  padding-bottom: 20px;
+  text-transform: capitalize;
+}
+
+/** button group styles **/
+.btn-group {
+  border-radius: 1rem;
+  text-transform: capitalize;
+}
+.btn-group__item {
+  border: none;
+  /* min-width: 6rem; */
+  padding: 1.5rem 3rem;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin: 18;
+  font-size: 20px;                                 
+  box-shadow: inset 0px 0px 0px -15px rebeccapurple;     /* for menu bar */
+  transition: all 300ms ease-out;
+  text-transform: capitalize;
+}
+.btn-group__item:last-child {
+  border-top-right-radius: 1rem;       /* menu list  ko edge haru */
+  border-bottom-right-radius: 1rem;
+}
+.btn-group__item:first-child {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.btn-group__item:hover,
+.btn-group__item:focus {
+  color: rebeccapurple;
+  box-shadow: inset 0px -20px 0px -15px rgb(0, 0, 0);
+}
+.btn-group__item:focus {
+  outline: none;
+}
+.btn-group__item:after {
+  content: "✔️";
+  margin-left: 0.5rem;
+  display: inline-block;
+  color: rebeccapurple;
+  position: absolute;
+  transform: translatey(10px);
+  opacity: 0;
+  transition: all 200ms ease-out;
+}
+.btn-group__item--active:after {
+  opacity: 1;
+  transform: translatey(-2px);
+}
